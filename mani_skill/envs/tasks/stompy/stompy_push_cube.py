@@ -7,7 +7,7 @@ import torch
 import torch.random
 from transforms3d.euler import euler2quat
 
-from mani_skill.agents.robots import Stompy
+from mani_skill.agents.robots import StompyArm
 from mani_skill.envs.sapien_env import BaseEnv
 from mani_skill.agents.base_agent import BaseAgent
 from mani_skill.agents.controllers import *
@@ -39,16 +39,16 @@ class SPushCubeEnv(BaseEnv):
     Visualization: https://maniskill.readthedocs.io/en/latest/tasks/index.html#pushcube-v1
     """
 
-    SUPPORTED_ROBOTS = ["stompy"]
+    SUPPORTED_ROBOTS = ["stompy_arm"]
 
     # Specify some supported robot types
-    agent: Union[Stompy]
+    agent: Union[StompyArm]
 
     # set some commonly used values
     goal_radius = 0.1
     cube_half_size = 0.02
 
-    def __init__(self, *args, robot_uids="stompy", robot_init_qpos_noise=0.02, **kwargs):
+    def __init__(self, *args, robot_uids="stompy_arm", robot_init_qpos_noise=0.02, **kwargs):
         # specifying robot_uids="panda" as the default means gym.make("PushCube-v1") will default to using the panda arm.
         self.robot_init_qpos_noise = robot_init_qpos_noise
         super().__init__(*args, robot_uids=robot_uids, **kwargs)
@@ -176,7 +176,7 @@ class SPushCubeEnv(BaseEnv):
         # some useful observation info for solving the task includes the pose of the tcp (tool center point) which is the point between the
         # grippers of the robot
         obs = dict(
-            tcp_pose=self.agent.tcp.pose.raw_pose,
+           
         )
         if self._obs_mode in ["state", "state_dict"]:
             # if the observation mode is state/state_dict, we provide ground truth information about where the cube is.
@@ -189,24 +189,25 @@ class SPushCubeEnv(BaseEnv):
 
     def compute_dense_reward(self, obs: Any, action: Array, info: Dict):
         # We also create a pose marking where the robot should push the cube from that is easiest (pushing from behind the cube)
-        tcp_push_pose = Pose.create_from_pq(
-            p=self.obj.pose.p
-            + torch.tensor([-self.cube_half_size - 0.005, 0, 0], device=self.device)
-        )
-        tcp_to_push_pose = tcp_push_pose.p - self.agent.tcp.pose.p
-        tcp_to_push_pose_dist = torch.linalg.norm(tcp_to_push_pose, axis=1)
-        reaching_reward = 1 - torch.tanh(5 * tcp_to_push_pose_dist)
-        reward = reaching_reward
+        # tcp_push_pose = Pose.create_from_pq(
+        #     p=self.obj.pose.p
+        #     + torch.tensor([-self.cube_half_size - 0.005, 0, 0], device=self.device)
+        # )
+        # tcp_to_push_pose = tcp_push_pose.p - self.agent.tcp.pose.p
+        # tcp_to_push_pose_dist = torch.linalg.norm(tcp_to_push_pose, axis=1)
+        # reaching_reward = 1 - torch.tanh(5 * tcp_to_push_pose_dist)
+        # reward = reaching_reward
+        reward = 0
 
         # compute a placement reward to encourage robot to move the cube to the center of the goal region
         # we further multiply the place_reward by a mask reached so we only add the place reward if the robot has reached the desired push pose
         # This reward design helps train RL agents faster by staging the reward out.
-        reached = tcp_to_push_pose_dist < 0.01
+        # reached = tcp_to_push_pose_dist < 0.01 
         obj_to_goal_dist = torch.linalg.norm(
             self.obj.pose.p[..., :2] - self.goal_region.pose.p[..., :2], axis=1
         )
         place_reward = 1 - torch.tanh(5 * obj_to_goal_dist)
-        reward += place_reward * reached
+        reward += place_reward #* reached
 
         # assign rewards to parallel environments that achieved success to the maximum of 3.
         reward[info["success"]] = 3
@@ -217,5 +218,3 @@ class SPushCubeEnv(BaseEnv):
         max_reward = 3.0
         return self.compute_dense_reward(obs=obs, action=action, info=info) / max_reward
     
-print(gym.envs.registry.keys())
-breakpoint()
