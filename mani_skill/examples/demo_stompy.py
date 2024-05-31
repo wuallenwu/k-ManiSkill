@@ -59,6 +59,13 @@ def parse_args(args=None):
 
 
 def main(args):
+    #print which link is the root
+    # print(StompyArm.urdf_config)
+    #print all links from arm
+    # print(StompyArm.fix_root_link)
+    # breakpoint()
+    # print(StompyArm.get_state(StompyArm))
+
     np.set_printoptions(suppress=True, precision=3)
     verbose = not args.quiet
     if args.seed is not None:
@@ -94,12 +101,14 @@ def main(args):
 
     while True:
         action = env.action_space.sample()
+        # print(action)
         obs, reward, terminated, truncated, info = env.step(action)
         if verbose:
-            print("reward", reward)
-            print("terminated", terminated)
-            print("truncated", truncated)
-            print("info", info)
+            # print("reward", reward)
+            # print("terminated", terminated)
+            # print("truncated", truncated)
+            # print("info", info)
+            pass
 
         if args.render_mode is not None:
             env.render()

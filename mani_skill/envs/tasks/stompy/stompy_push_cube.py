@@ -49,8 +49,8 @@ class SPushCubeEnv(BaseEnv):
     cube_half_size = 0.02
 
     def __init__(self, *args, robot_uids="stompy_arm", robot_init_qpos_noise=0.02, **kwargs):
-        # specifying robot_uids="panda" as the default means gym.make("PushCube-v1") will default to using the panda arm.
-        self.robot_init_qpos_noise = robot_init_qpos_noise
+        # specifying robot_uids="stompy_arm" as the default means gym.make("Stompy-PushCube") will default to using the panda arm.
+        self.robot_init_qpos_noise = 0.0
         super().__init__(*args, robot_uids=robot_uids, **kwargs)
 
     # Specify default simulation/gpu memory configurations to override any default values

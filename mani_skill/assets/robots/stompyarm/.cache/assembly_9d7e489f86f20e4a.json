@@ -1,0 +1,3138 @@
+{
+  "features": [
+    {
+      "type": 64,
+      "typeName": "BTMMate",
+      "message": {
+        "version": 2,
+        "featureType": "mate",
+        "featureId": "MLb/hwduSUpazelg0",
+        "name": "Fastened 1",
+        "parameters": [
+          {
+            "type": 145,
+            "typeName": "BTMParameterEnum",
+            "message": {
+              "enumName": "Mate type",
+              "value": "FASTENED",
+              "namespace": "",
+              "parameterId": "mateType",
+              "hasUserCode": false,
+              "nodeId": "z+5MAld+Mx6a2DQj"
+            }
+          },
+          {
+            "type": 67,
+            "typeName": "BTMParameterQueryWithOccurrenceList",
+            "message": {
+              "queries": [
+                {
+                  "type": 157,
+                  "typeName": "BTMFeatureQueryWithOccurrence",
+                  "message": {
+                    "featureId": "M+pP+OM8PnSpC96Tm",
+                    "queryData": "",
+                    "path": [],
+                    "hasUserCode": false,
+                    "nodeId": "MsRqPyXkNAgpXyQ7O"
+                  }
+                },
+                {
+                  "type": 157,
+                  "typeName": "BTMFeatureQueryWithOccurrence",
+                  "message": {
+                    "featureId": "MqPW+jJEulFz7fD6G",
+                    "queryData": "",
+                    "path": [],
+                    "hasUserCode": false,
+                    "nodeId": "MjrCpwkBPlPJDPcsO"
+                  }
+                }
+              ],
+              "parameterId": "mateConnectorsQuery",
+              "hasUserCode": false,
+              "nodeId": "UNctbKvSXJPUAJ3e"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": false,
+              "parameterId": "mateOffsetEnabled",
+              "hasUserCode": false,
+              "nodeId": "8nCEJj1X4lRPtV6J"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "mateOffsetDistanceX",
+              "hasUserCode": false,
+              "nodeId": "R5d13Ytu6Hy7/vN8"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "mateOffsetDistanceY",
+              "hasUserCode": false,
+              "nodeId": "ABBCyJaxn1HcwZwI"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "mateOffsetDistanceZ",
+              "hasUserCode": false,
+              "nodeId": "6r03aYY6rOYeoEgE"
+            }
+          },
+          {
+            "type": 145,
+            "typeName": "BTMParameterEnum",
+            "message": {
+              "enumName": "Rotation axis",
+              "value": "ABOUT_X",
+              "namespace": "",
+              "parameterId": "rotationType",
+              "hasUserCode": false,
+              "nodeId": "SCwpNJWDPFuuRaCH"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "rotation",
+              "hasUserCode": false,
+              "nodeId": "iYWBjHrDIwdmpwjL"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": false,
+              "parameterId": "limitsEnabled",
+              "hasUserCode": false,
+              "nodeId": "TLIiJw5RL9HrRA2M"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitXMin",
+              "hasUserCode": false,
+              "nodeId": "+8Uzd02WPEv2l2Yl"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitXMax",
+              "hasUserCode": false,
+              "nodeId": "kMZIA/m3hqZjJxDD"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitYMin",
+              "hasUserCode": false,
+              "nodeId": "AcvK0KfeFwJa4DEQ"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitYMax",
+              "hasUserCode": false,
+              "nodeId": "Uh/9GuG1K+sfB1yM"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitZMin",
+              "hasUserCode": false,
+              "nodeId": "VrKQCl/32MvNtQpH"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitZMax",
+              "hasUserCode": false,
+              "nodeId": "7X8d3pI+vvJnuAmj"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialXMin",
+              "hasUserCode": false,
+              "nodeId": "O70SQk/IHjt57MIF"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialXMax",
+              "hasUserCode": false,
+              "nodeId": "bONIUaLgVAuhoZfI"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialYMin",
+              "hasUserCode": false,
+              "nodeId": "Gwlpj9eZB58VYgAZ"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialYMax",
+              "hasUserCode": false,
+              "nodeId": "Y8XAPKTjCRRfjLvD"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialZMin",
+              "hasUserCode": false,
+              "nodeId": "7FU2kxXhgOW2ZP6d"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialZMax",
+              "hasUserCode": false,
+              "nodeId": "REY0pkE1ihiO++AU"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitEulerConeAngleMax",
+              "hasUserCode": false,
+              "nodeId": "u53EMToNsyABOcR+"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": false,
+              "parameterId": "functionalconnection",
+              "hasUserCode": false,
+              "nodeId": "ZHvHu634SAXUz4xA"
+            }
+          },
+          {
+            "type": 67,
+            "typeName": "BTMParameterQueryWithOccurrenceList",
+            "message": {
+              "queries": [],
+              "parameterId": "facestoconnect",
+              "hasUserCode": false,
+              "nodeId": "i/pdaRX4OjvzRqHS"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": true,
+              "parameterId": "primaryAxisAlignment",
+              "hasUserCode": false,
+              "nodeId": "2ZWvR9gY1iyd6UlE"
+            }
+          },
+          {
+            "type": 145,
+            "typeName": "BTMParameterEnum",
+            "message": {
+              "enumName": "Reorient secondary axis",
+              "value": "PLUS_Y",
+              "namespace": "",
+              "parameterId": "secondaryAxisAlignment",
+              "hasUserCode": false,
+              "nodeId": "rTBkwVxlSzLSOUch"
+            }
+          }
+        ],
+        "suppressed": false,
+        "namespace": "",
+        "subFeatures": [],
+        "returnAfterSubfeatures": false,
+        "suppressionState": {
+          "type": 0
+        },
+        "hasUserCode": false,
+        "nodeId": "MLb/hwduSUpazelg0",
+        "mateConnectors": [
+          {
+            "type": 66,
+            "typeName": "BTMMateConnector",
+            "message": {
+              "isHidden": true,
+              "implicit": true,
+              "isAuxiliaryTreeMateConnector": false,
+              "version": 4,
+              "featureType": "mateConnector",
+              "featureId": "MqPW+jJEulFz7fD6G",
+              "name": "Mate connector",
+              "parameters": [
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Origin type",
+                    "value": "ON_ENTITY",
+                    "namespace": "",
+                    "parameterId": "originType",
+                    "hasUserCode": false,
+                    "nodeId": "MxO3kWCx1GkIgX01Z"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [
+                      {
+                        "type": 1083,
+                        "typeName": "BTMInferenceQueryWithOccurrence",
+                        "message": {
+                          "secondGeometryId": "",
+                          "inferenceType": "CENTER",
+                          "geometryIds": [
+                            "JRJ"
+                          ],
+                          "path": [
+                            "MUFFdzyWvjmEoU2ry",
+                            "MJkYeQEXi73HMEZht"
+                          ],
+                          "hasUserCode": false,
+                          "nodeId": "F8v6p0fgnoV0Yvi"
+                        }
+                      }
+                    ],
+                    "parameterId": "originQuery",
+                    "hasUserCode": false,
+                    "nodeId": "M1goSSHee1khjZRjm"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "originAdditionalQuery",
+                    "hasUserCode": false,
+                    "nodeId": "M5euKtdOU8X3PE+t1"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "realign",
+                    "hasUserCode": false,
+                    "nodeId": "MedOOWHERk+pwlT7a"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "primaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MMDR2gqCnywvVGzPv"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "secondaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MfUfxXr/WOxwYETtc"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "transform",
+                    "hasUserCode": false,
+                    "nodeId": "MKEeb0i3q42nFA0ZZ"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationX",
+                    "hasUserCode": false,
+                    "nodeId": "Mu5qMyr+UFVB/kzvf"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationY",
+                    "hasUserCode": false,
+                    "nodeId": "MNeEoVeJp/TQJ6Se9"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationZ",
+                    "hasUserCode": false,
+                    "nodeId": "M8CViR6YX/jUSmYU+"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Rotation axis",
+                    "value": "ABOUT_Z",
+                    "namespace": "",
+                    "parameterId": "rotationType",
+                    "hasUserCode": false,
+                    "nodeId": "M3edxHFVT0zRGR2ja"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*deg",
+                    "isInteger": false,
+                    "parameterId": "rotation",
+                    "hasUserCode": false,
+                    "nodeId": "Mjjvbj41xAzbqqPYp"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "flipPrimary",
+                    "hasUserCode": false,
+                    "nodeId": "MskKAWrwhYZvT+h5M"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Reorient secondary axis",
+                    "value": "PLUS_X",
+                    "namespace": "",
+                    "parameterId": "secondaryAxisType",
+                    "hasUserCode": false,
+                    "nodeId": "MA8Tia086udoD2nTc"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": 66,
+            "typeName": "BTMMateConnector",
+            "message": {
+              "isHidden": true,
+              "implicit": true,
+              "isAuxiliaryTreeMateConnector": false,
+              "version": 4,
+              "featureType": "mateConnector",
+              "featureId": "M+pP+OM8PnSpC96Tm",
+              "name": "Mate connector",
+              "parameters": [
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Origin type",
+                    "value": "ON_ENTITY",
+                    "namespace": "",
+                    "parameterId": "originType",
+                    "hasUserCode": false,
+                    "nodeId": "Ms7EkW5roU7k+hlTu"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [
+                      {
+                        "type": 1083,
+                        "typeName": "BTMInferenceQueryWithOccurrence",
+                        "message": {
+                          "secondGeometryId": "",
+                          "inferenceType": "CENTER",
+                          "geometryIds": [
+                            "RNCh"
+                          ],
+                          "path": [
+                            "MKdjrArj9LkUHfvnC"
+                          ],
+                          "hasUserCode": false,
+                          "nodeId": "FUBbzSs1u3T7TCA"
+                        }
+                      }
+                    ],
+                    "parameterId": "originQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MRCt0wdWfhrCb75Zk"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "originAdditionalQuery",
+                    "hasUserCode": false,
+                    "nodeId": "Mf5I8LY1O/oqVKxlj"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "realign",
+                    "hasUserCode": false,
+                    "nodeId": "MvfoaN6n3lZn933LE"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "primaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MPv2q//3nqrextke5"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "secondaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MMYgWvvw0hB8kRqJc"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "transform",
+                    "hasUserCode": false,
+                    "nodeId": "M+gDWYCIXgBLU1DdA"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationX",
+                    "hasUserCode": false,
+                    "nodeId": "Mn0wnEDwAOoKJ5nMm"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationY",
+                    "hasUserCode": false,
+                    "nodeId": "MELauC2sp3tnMrdEi"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationZ",
+                    "hasUserCode": false,
+                    "nodeId": "M/zL5D0ZyNzo3jODr"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Rotation axis",
+                    "value": "ABOUT_Z",
+                    "namespace": "",
+                    "parameterId": "rotationType",
+                    "hasUserCode": false,
+                    "nodeId": "MHKyNpIDEfPyoMNkw"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*deg",
+                    "isInteger": false,
+                    "parameterId": "rotation",
+                    "hasUserCode": false,
+                    "nodeId": "Mx2PIeu8jn4tDnBWO"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "flipPrimary",
+                    "hasUserCode": false,
+                    "nodeId": "MwjAaUhrOVIV++dxF"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Reorient secondary axis",
+                    "value": "PLUS_X",
+                    "namespace": "",
+                    "parameterId": "secondaryAxisType",
+                    "hasUserCode": false,
+                    "nodeId": "MR2vx1WdZhqXPZvht"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": 64,
+      "typeName": "BTMMate",
+      "message": {
+        "version": 2,
+        "featureType": "mate",
+        "featureId": "MERt0YN34dxElmTUV",
+        "name": "Fastened 2",
+        "parameters": [
+          {
+            "type": 145,
+            "typeName": "BTMParameterEnum",
+            "message": {
+              "enumName": "Mate type",
+              "value": "FASTENED",
+              "namespace": "",
+              "parameterId": "mateType",
+              "hasUserCode": false,
+              "nodeId": "uyaF9FqtEryr+OJi"
+            }
+          },
+          {
+            "type": 67,
+            "typeName": "BTMParameterQueryWithOccurrenceList",
+            "message": {
+              "queries": [
+                {
+                  "type": 157,
+                  "typeName": "BTMFeatureQueryWithOccurrence",
+                  "message": {
+                    "featureId": "M1RFEZRGjDYTyMdHQ",
+                    "queryData": "",
+                    "path": [],
+                    "hasUserCode": false,
+                    "nodeId": "MONd2waHxVrdv+Lmg"
+                  }
+                },
+                {
+                  "type": 157,
+                  "typeName": "BTMFeatureQueryWithOccurrence",
+                  "message": {
+                    "featureId": "M9sIhIAv/icVkNiba",
+                    "queryData": "",
+                    "path": [],
+                    "hasUserCode": false,
+                    "nodeId": "M/N68wqYBUHQ8xbCr"
+                  }
+                }
+              ],
+              "parameterId": "mateConnectorsQuery",
+              "hasUserCode": false,
+              "nodeId": "Bj/q5TsV28rX5ylY"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": false,
+              "parameterId": "mateOffsetEnabled",
+              "hasUserCode": false,
+              "nodeId": "WqMigRT4Qn9ClhTC"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "mateOffsetDistanceX",
+              "hasUserCode": false,
+              "nodeId": "qPx3GZocg8dn/1+g"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "mateOffsetDistanceY",
+              "hasUserCode": false,
+              "nodeId": "w3yML9ptvGZb1kRq"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "mateOffsetDistanceZ",
+              "hasUserCode": false,
+              "nodeId": "8YiaIJCrzCkE6ggn"
+            }
+          },
+          {
+            "type": 145,
+            "typeName": "BTMParameterEnum",
+            "message": {
+              "enumName": "Rotation axis",
+              "value": "ABOUT_X",
+              "namespace": "",
+              "parameterId": "rotationType",
+              "hasUserCode": false,
+              "nodeId": "XDIlaFl9fYqguSgy"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "rotation",
+              "hasUserCode": false,
+              "nodeId": "bW6NsP5PIi+cmxlK"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": false,
+              "parameterId": "limitsEnabled",
+              "hasUserCode": false,
+              "nodeId": "NdSvpdyeCeFvy57H"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitXMin",
+              "hasUserCode": false,
+              "nodeId": "LtPtiZckwlVqwWKD"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitXMax",
+              "hasUserCode": false,
+              "nodeId": "M04yCuB48qRw/kOw"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitYMin",
+              "hasUserCode": false,
+              "nodeId": "N4P4sQeenJnVFQ9N"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitYMax",
+              "hasUserCode": false,
+              "nodeId": "pWFhZczw5oqt6dyC"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitZMin",
+              "hasUserCode": false,
+              "nodeId": "Q1Q+QoHzf1Ckr9XV"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitZMax",
+              "hasUserCode": false,
+              "nodeId": "0UYtUNCuhsHerqo+"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialXMin",
+              "hasUserCode": false,
+              "nodeId": "9cZ1Q/tCv6Hmtmzj"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialXMax",
+              "hasUserCode": false,
+              "nodeId": "TeB40J5LonmCIYKD"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialYMin",
+              "hasUserCode": false,
+              "nodeId": "DKlrEHR4cLDj++YF"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialYMax",
+              "hasUserCode": false,
+              "nodeId": "IKT389TXkiAxHM5q"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialZMin",
+              "hasUserCode": false,
+              "nodeId": "FZ5uq1Wim2OYU4zx"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialZMax",
+              "hasUserCode": false,
+              "nodeId": "Jhn1LvSJ5txNLbI1"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitEulerConeAngleMax",
+              "hasUserCode": false,
+              "nodeId": "U/HGUqA4OhJAH7ft"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": false,
+              "parameterId": "functionalconnection",
+              "hasUserCode": false,
+              "nodeId": "lEL3oefddYTH4T36"
+            }
+          },
+          {
+            "type": 67,
+            "typeName": "BTMParameterQueryWithOccurrenceList",
+            "message": {
+              "queries": [],
+              "parameterId": "facestoconnect",
+              "hasUserCode": false,
+              "nodeId": "XfoNxqygd2+F77Yp"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": true,
+              "parameterId": "primaryAxisAlignment",
+              "hasUserCode": false,
+              "nodeId": "DIyy5AZN30bqmmS1"
+            }
+          },
+          {
+            "type": 145,
+            "typeName": "BTMParameterEnum",
+            "message": {
+              "enumName": "Reorient secondary axis",
+              "value": "MINUS_Y",
+              "namespace": "",
+              "parameterId": "secondaryAxisAlignment",
+              "hasUserCode": false,
+              "nodeId": "pmzjIvG+Yh+couFF"
+            }
+          }
+        ],
+        "suppressed": false,
+        "namespace": "",
+        "subFeatures": [],
+        "returnAfterSubfeatures": false,
+        "suppressionState": {
+          "type": 0
+        },
+        "hasUserCode": false,
+        "nodeId": "MERt0YN34dxElmTUV",
+        "mateConnectors": [
+          {
+            "type": 66,
+            "typeName": "BTMMateConnector",
+            "message": {
+              "isHidden": true,
+              "implicit": true,
+              "isAuxiliaryTreeMateConnector": false,
+              "version": 4,
+              "featureType": "mateConnector",
+              "featureId": "M9sIhIAv/icVkNiba",
+              "name": "Mate connector",
+              "parameters": [
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Origin type",
+                    "value": "ON_ENTITY",
+                    "namespace": "",
+                    "parameterId": "originType",
+                    "hasUserCode": false,
+                    "nodeId": "MnSiaTxkgMvO1GFKx"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [
+                      {
+                        "type": 1083,
+                        "typeName": "BTMInferenceQueryWithOccurrence",
+                        "message": {
+                          "secondGeometryId": "",
+                          "inferenceType": "CENTER",
+                          "geometryIds": [
+                            "JRJ"
+                          ],
+                          "path": [
+                            "MS1MrLHdblorGE5YO",
+                            "MJkYeQEXi73HMEZht"
+                          ],
+                          "hasUserCode": false,
+                          "nodeId": "FnGxz2FOBpwS2hj"
+                        }
+                      }
+                    ],
+                    "parameterId": "originQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MmazjIa4ZXzUBRYAa"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "originAdditionalQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MnoJv8BcbXtGpT5it"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "realign",
+                    "hasUserCode": false,
+                    "nodeId": "MeHE/GRT/IBCa4UNq"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "primaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MpYyGKG6cTzYi1y9y"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "secondaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MT6BucFQO/8v4XgVA"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "transform",
+                    "hasUserCode": false,
+                    "nodeId": "MoWe8S+eOzdhZ/gkZ"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationX",
+                    "hasUserCode": false,
+                    "nodeId": "MIitLIrQ8hJHczbjy"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationY",
+                    "hasUserCode": false,
+                    "nodeId": "MlTEOqfiVSoe+FAX+"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationZ",
+                    "hasUserCode": false,
+                    "nodeId": "MhRotF4MCj1VbSVCX"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Rotation axis",
+                    "value": "ABOUT_Z",
+                    "namespace": "",
+                    "parameterId": "rotationType",
+                    "hasUserCode": false,
+                    "nodeId": "M8n7Cidjvgi7cMNhw"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*deg",
+                    "isInteger": false,
+                    "parameterId": "rotation",
+                    "hasUserCode": false,
+                    "nodeId": "Mwj5X08L0vT0d4WYi"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "flipPrimary",
+                    "hasUserCode": false,
+                    "nodeId": "MzxnjzRx9Zb6674EA"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Reorient secondary axis",
+                    "value": "PLUS_X",
+                    "namespace": "",
+                    "parameterId": "secondaryAxisType",
+                    "hasUserCode": false,
+                    "nodeId": "MAURDWKp5YCD9jJsE"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": 66,
+            "typeName": "BTMMateConnector",
+            "message": {
+              "isHidden": true,
+              "implicit": true,
+              "isAuxiliaryTreeMateConnector": false,
+              "version": 4,
+              "featureType": "mateConnector",
+              "featureId": "M1RFEZRGjDYTyMdHQ",
+              "name": "Mate connector",
+              "parameters": [
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Origin type",
+                    "value": "ON_ENTITY",
+                    "namespace": "",
+                    "parameterId": "originType",
+                    "hasUserCode": false,
+                    "nodeId": "Mt4jKuh1ungNcuHn8"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [
+                      {
+                        "type": 1083,
+                        "typeName": "BTMInferenceQueryWithOccurrence",
+                        "message": {
+                          "secondGeometryId": "",
+                          "inferenceType": "CENTER",
+                          "geometryIds": [
+                            "RNCd"
+                          ],
+                          "path": [
+                            "MKdjrArj9LkUHfvnC"
+                          ],
+                          "hasUserCode": false,
+                          "nodeId": "FHSkNdJghpN27yV"
+                        }
+                      }
+                    ],
+                    "parameterId": "originQuery",
+                    "hasUserCode": false,
+                    "nodeId": "Mb5ek4bidt+Xqs4dg"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "originAdditionalQuery",
+                    "hasUserCode": false,
+                    "nodeId": "Mg9Z2muz8sAzh9qCW"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "realign",
+                    "hasUserCode": false,
+                    "nodeId": "MbWiy7T5pYF6gXwHI"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "primaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MjARxPDk+FWZrT5wO"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "secondaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MbqsRIcEGPmbwe1x7"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "transform",
+                    "hasUserCode": false,
+                    "nodeId": "M9vBl6KDdeXvSfU4E"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationX",
+                    "hasUserCode": false,
+                    "nodeId": "M0lnYTNIhQEZYXGQ8"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationY",
+                    "hasUserCode": false,
+                    "nodeId": "MvR/fAgCULEptFCnO"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationZ",
+                    "hasUserCode": false,
+                    "nodeId": "MFuOaTu9ytrmMPTIH"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Rotation axis",
+                    "value": "ABOUT_Z",
+                    "namespace": "",
+                    "parameterId": "rotationType",
+                    "hasUserCode": false,
+                    "nodeId": "MCt75BHcvr72eqFtq"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*deg",
+                    "isInteger": false,
+                    "parameterId": "rotation",
+                    "hasUserCode": false,
+                    "nodeId": "MHv4xHt/fysPa3DgC"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "flipPrimary",
+                    "hasUserCode": false,
+                    "nodeId": "MEa/3ytWegPbUtMNH"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Reorient secondary axis",
+                    "value": "PLUS_X",
+                    "namespace": "",
+                    "parameterId": "secondaryAxisType",
+                    "hasUserCode": false,
+                    "nodeId": "MakJuvMuap0YtdVUL"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": 64,
+      "typeName": "BTMMate",
+      "message": {
+        "version": 2,
+        "featureType": "mate",
+        "featureId": "M3dmleGi3UUfdwna6",
+        "name": "Fastened 4",
+        "parameters": [
+          {
+            "type": 145,
+            "typeName": "BTMParameterEnum",
+            "message": {
+              "enumName": "Mate type",
+              "value": "FASTENED",
+              "namespace": "",
+              "parameterId": "mateType",
+              "hasUserCode": false,
+              "nodeId": "rrdlDdCS88sBS4PG"
+            }
+          },
+          {
+            "type": 67,
+            "typeName": "BTMParameterQueryWithOccurrenceList",
+            "message": {
+              "queries": [
+                {
+                  "type": 157,
+                  "typeName": "BTMFeatureQueryWithOccurrence",
+                  "message": {
+                    "featureId": "MHBgfnXdksXTQ+0Ci",
+                    "queryData": "",
+                    "path": [],
+                    "hasUserCode": false,
+                    "nodeId": "MLpfKida3d3TBhGHW"
+                  }
+                },
+                {
+                  "type": 157,
+                  "typeName": "BTMFeatureQueryWithOccurrence",
+                  "message": {
+                    "featureId": "MUrHn9VQmX3IJdFzV",
+                    "queryData": "",
+                    "path": [],
+                    "hasUserCode": false,
+                    "nodeId": "M5s37HIUBTBrBJGW5"
+                  }
+                }
+              ],
+              "parameterId": "mateConnectorsQuery",
+              "hasUserCode": false,
+              "nodeId": "0z7SuE2FrwVOgH0T"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": true,
+              "parameterId": "mateOffsetEnabled",
+              "hasUserCode": false,
+              "nodeId": "s8Kk8AUioA2SW/ZU"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "mateOffsetDistanceX",
+              "hasUserCode": false,
+              "nodeId": "clOV/XMqUV1/h3FN"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "mateOffsetDistanceY",
+              "hasUserCode": false,
+              "nodeId": "pja90chDezBidK3n"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "mateOffsetDistanceZ",
+              "hasUserCode": false,
+              "nodeId": "Dkax3eUMtmlSGeEG"
+            }
+          },
+          {
+            "type": 145,
+            "typeName": "BTMParameterEnum",
+            "message": {
+              "enumName": "Rotation axis",
+              "value": "ABOUT_Z",
+              "namespace": "",
+              "parameterId": "rotationType",
+              "hasUserCode": false,
+              "nodeId": "qtGabd1vTeQHp7Sk"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "-30 deg",
+              "isInteger": false,
+              "parameterId": "rotation",
+              "hasUserCode": false,
+              "nodeId": "MnheH62AKBVJyS/b"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": false,
+              "parameterId": "limitsEnabled",
+              "hasUserCode": false,
+              "nodeId": "2GkDcQgdoWK7iwrY"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitXMin",
+              "hasUserCode": false,
+              "nodeId": "RiVDcU/T8iknvPqQ"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitXMax",
+              "hasUserCode": false,
+              "nodeId": "74Nv3+4uzIeJsTbY"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitYMin",
+              "hasUserCode": false,
+              "nodeId": "55xwNaW4vhRRcs2f"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitYMax",
+              "hasUserCode": false,
+              "nodeId": "r3A/fXd/mcms30eb"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitZMin",
+              "hasUserCode": false,
+              "nodeId": "lql+IJUOFCJDmKA4"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitZMax",
+              "hasUserCode": false,
+              "nodeId": "dSPX7w15imhhvxuv"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialXMin",
+              "hasUserCode": false,
+              "nodeId": "18DGkMd6CfNLtaBg"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialXMax",
+              "hasUserCode": false,
+              "nodeId": "zD3wmvGMXaMDlQIN"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialYMin",
+              "hasUserCode": false,
+              "nodeId": "NEoRSJojhUWkYJ73"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialYMax",
+              "hasUserCode": false,
+              "nodeId": "ecyA8Bs6KMsOQxPc"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialZMin",
+              "hasUserCode": false,
+              "nodeId": "Jt/FDqq29NDXinpy"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialZMax",
+              "hasUserCode": false,
+              "nodeId": "s77FBl7G5KsSmsTM"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitEulerConeAngleMax",
+              "hasUserCode": false,
+              "nodeId": "v1bV6fsePBSQS61y"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": false,
+              "parameterId": "functionalconnection",
+              "hasUserCode": false,
+              "nodeId": "fMF/RJjlzkP94+LS"
+            }
+          },
+          {
+            "type": 67,
+            "typeName": "BTMParameterQueryWithOccurrenceList",
+            "message": {
+              "queries": [],
+              "parameterId": "facestoconnect",
+              "hasUserCode": false,
+              "nodeId": "X3ImxqUy8JB3T53M"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": true,
+              "parameterId": "primaryAxisAlignment",
+              "hasUserCode": false,
+              "nodeId": "eOptDHrUo7XUDFgB"
+            }
+          },
+          {
+            "type": 145,
+            "typeName": "BTMParameterEnum",
+            "message": {
+              "enumName": "Reorient secondary axis",
+              "value": "PLUS_Y",
+              "namespace": "",
+              "parameterId": "secondaryAxisAlignment",
+              "hasUserCode": false,
+              "nodeId": "Ec/FC1mnPlYO5fZK"
+            }
+          }
+        ],
+        "suppressed": false,
+        "namespace": "",
+        "subFeatures": [],
+        "returnAfterSubfeatures": false,
+        "suppressionState": {
+          "type": 0
+        },
+        "hasUserCode": false,
+        "nodeId": "M3dmleGi3UUfdwna6",
+        "mateConnectors": [
+          {
+            "type": 66,
+            "typeName": "BTMMateConnector",
+            "message": {
+              "isHidden": true,
+              "implicit": true,
+              "isAuxiliaryTreeMateConnector": false,
+              "version": 5,
+              "featureType": "mateConnector",
+              "featureId": "MHBgfnXdksXTQ+0Ci",
+              "name": "Mate connector",
+              "parameters": [
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Origin type",
+                    "value": "ON_ENTITY",
+                    "namespace": "",
+                    "parameterId": "originType",
+                    "hasUserCode": false,
+                    "nodeId": "ML/gKmww4Cy8QQXW2"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [
+                      {
+                        "type": 1083,
+                        "typeName": "BTMInferenceQueryWithOccurrence",
+                        "message": {
+                          "secondGeometryId": "",
+                          "inferenceType": "CENTER",
+                          "geometryIds": [
+                            "Jbt"
+                          ],
+                          "path": [
+                            "MS1MrLHdblorGE5YO",
+                            "MPfw6UqzXGYtW//79"
+                          ],
+                          "hasUserCode": false,
+                          "nodeId": "FuTabGZMMJkO7pG"
+                        }
+                      }
+                    ],
+                    "parameterId": "originQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MezzRb9uGZ4QsQNoU"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "originAdditionalQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MecK5N+U5vfYbhm+r"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "realign",
+                    "hasUserCode": false,
+                    "nodeId": "MaM4A1xMUcTGykHMY"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "primaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "M1Fpc1fZ7IXrMS0ay"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "secondaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "M+/6/o3MhcSiAS50m"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "transform",
+                    "hasUserCode": false,
+                    "nodeId": "Msq+ngKiOmL3r5HWG"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationX",
+                    "hasUserCode": false,
+                    "nodeId": "MlEYXwEf7HdlmCBr1"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationY",
+                    "hasUserCode": false,
+                    "nodeId": "M/1ZfPoo01upN9b8M"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationZ",
+                    "hasUserCode": false,
+                    "nodeId": "MnWLUIsjEaIj5rkl6"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Rotation axis",
+                    "value": "ABOUT_Z",
+                    "namespace": "",
+                    "parameterId": "rotationType",
+                    "hasUserCode": false,
+                    "nodeId": "MxxuQQNwAYQIL7tkX"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*deg",
+                    "isInteger": false,
+                    "parameterId": "rotation",
+                    "hasUserCode": false,
+                    "nodeId": "Mqei5Vorpy8An+O5A"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "flipPrimary",
+                    "hasUserCode": false,
+                    "nodeId": "M973BwZypJqfv3ICm"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Reorient secondary axis",
+                    "value": "PLUS_X",
+                    "namespace": "",
+                    "parameterId": "secondaryAxisType",
+                    "hasUserCode": false,
+                    "nodeId": "Mbg57Rab4wEyWwMjO"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": 66,
+            "typeName": "BTMMateConnector",
+            "message": {
+              "isHidden": true,
+              "implicit": true,
+              "isAuxiliaryTreeMateConnector": false,
+              "version": 5,
+              "featureType": "mateConnector",
+              "featureId": "MUrHn9VQmX3IJdFzV",
+              "name": "Mate connector",
+              "parameters": [
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Origin type",
+                    "value": "ON_ENTITY",
+                    "namespace": "",
+                    "parameterId": "originType",
+                    "hasUserCode": false,
+                    "nodeId": "MnuxAdyNBjnmtWJFP"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [
+                      {
+                        "type": 1083,
+                        "typeName": "BTMInferenceQueryWithOccurrence",
+                        "message": {
+                          "secondGeometryId": "",
+                          "inferenceType": "CENTER",
+                          "geometryIds": [
+                            "J2R"
+                          ],
+                          "path": [
+                            "Mfr1/H5E85/r6PBYT",
+                            "MkqZDgTfkndYxbHzA"
+                          ],
+                          "hasUserCode": false,
+                          "nodeId": "FWmzjC805wleD2n"
+                        }
+                      }
+                    ],
+                    "parameterId": "originQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MXPwF18BcrPTG1FrC"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "originAdditionalQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MLBDMSLZyJ9gIi8eu"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "realign",
+                    "hasUserCode": false,
+                    "nodeId": "MsJZtPYUbRTefxEDv"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "primaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "M6O6dZlmT+Fkh8086"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "secondaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MfSlPd++oFgp8RedT"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "transform",
+                    "hasUserCode": false,
+                    "nodeId": "MrYyJ3XEt+ymQRWyy"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationX",
+                    "hasUserCode": false,
+                    "nodeId": "MxoDxGAdAdn9S/kAP"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationY",
+                    "hasUserCode": false,
+                    "nodeId": "MK/hHQRofr2wt9E+4"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationZ",
+                    "hasUserCode": false,
+                    "nodeId": "ML2GasqETGOky935/"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Rotation axis",
+                    "value": "ABOUT_Z",
+                    "namespace": "",
+                    "parameterId": "rotationType",
+                    "hasUserCode": false,
+                    "nodeId": "MnEVTR7335J2PjBbX"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*deg",
+                    "isInteger": false,
+                    "parameterId": "rotation",
+                    "hasUserCode": false,
+                    "nodeId": "Mb8kBveACzktPT9Te"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "flipPrimary",
+                    "hasUserCode": false,
+                    "nodeId": "MeuzXAyCZCpy504Xh"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Reorient secondary axis",
+                    "value": "PLUS_X",
+                    "namespace": "",
+                    "parameterId": "secondaryAxisType",
+                    "hasUserCode": false,
+                    "nodeId": "MGvu4mI8jmXYa/XJ6"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": 64,
+      "typeName": "BTMMate",
+      "message": {
+        "version": 2,
+        "featureType": "mate",
+        "featureId": "MNdreklEfaOk4cI8Q",
+        "name": "Fastened 5",
+        "parameters": [
+          {
+            "type": 145,
+            "typeName": "BTMParameterEnum",
+            "message": {
+              "enumName": "Mate type",
+              "value": "FASTENED",
+              "namespace": "",
+              "parameterId": "mateType",
+              "hasUserCode": false,
+              "nodeId": "jMLHg/z4l/5dvz0F"
+            }
+          },
+          {
+            "type": 67,
+            "typeName": "BTMParameterQueryWithOccurrenceList",
+            "message": {
+              "queries": [
+                {
+                  "type": 157,
+                  "typeName": "BTMFeatureQueryWithOccurrence",
+                  "message": {
+                    "featureId": "M4lYn+g1a1g/F3cUs",
+                    "queryData": "",
+                    "path": [],
+                    "hasUserCode": false,
+                    "nodeId": "MZWqLKbryLpGBC66j"
+                  }
+                },
+                {
+                  "type": 157,
+                  "typeName": "BTMFeatureQueryWithOccurrence",
+                  "message": {
+                    "featureId": "MX4Or1Y2/duN102LR",
+                    "queryData": "",
+                    "path": [],
+                    "hasUserCode": false,
+                    "nodeId": "Mo1xfBY6CXfhTRN83"
+                  }
+                }
+              ],
+              "parameterId": "mateConnectorsQuery",
+              "hasUserCode": false,
+              "nodeId": "4G7j5hGX8g+x8Nw3"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": true,
+              "parameterId": "mateOffsetEnabled",
+              "hasUserCode": false,
+              "nodeId": "QofmUDTGJJSPROBk"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "mateOffsetDistanceX",
+              "hasUserCode": false,
+              "nodeId": "sD3PY9GyBqT596at"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "mateOffsetDistanceY",
+              "hasUserCode": false,
+              "nodeId": "r/1pnzFYy9359BRL"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "mateOffsetDistanceZ",
+              "hasUserCode": false,
+              "nodeId": "ouaC/Ff9e/wyUevM"
+            }
+          },
+          {
+            "type": 145,
+            "typeName": "BTMParameterEnum",
+            "message": {
+              "enumName": "Rotation axis",
+              "value": "ABOUT_Z",
+              "namespace": "",
+              "parameterId": "rotationType",
+              "hasUserCode": false,
+              "nodeId": "QGT41nMfst2aMcLk"
+            }
+          },
+          {
+            "type": 147,
+            "typeName": "BTMParameterQuantity",
+            "message": {
+              "units": "",
+              "value": 0.0,
+              "expression": "30 deg",
+              "isInteger": false,
+              "parameterId": "rotation",
+              "hasUserCode": false,
+              "nodeId": "2nDO21rKIBYkIa3i"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": false,
+              "parameterId": "limitsEnabled",
+              "hasUserCode": false,
+              "nodeId": "mPdebIsgnLiD4/Wm"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitXMin",
+              "hasUserCode": false,
+              "nodeId": "YeY3XOHcROOKhFRm"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitXMax",
+              "hasUserCode": false,
+              "nodeId": "pXz5lK+qqRBGjABL"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitYMin",
+              "hasUserCode": false,
+              "nodeId": "GLrfuF69+eVP+EIa"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitYMax",
+              "hasUserCode": false,
+              "nodeId": "RczrBbabt94zgOwO"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitZMin",
+              "hasUserCode": false,
+              "nodeId": "d0s7663LrP6B694V"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 mm",
+              "isInteger": false,
+              "parameterId": "limitZMax",
+              "hasUserCode": false,
+              "nodeId": "FwJTFCt0MIbB+QNl"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialXMin",
+              "hasUserCode": false,
+              "nodeId": "FAE3sS8QiRSKdKkI"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialXMax",
+              "hasUserCode": false,
+              "nodeId": "U68/MZOWmkRzzWut"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialYMin",
+              "hasUserCode": false,
+              "nodeId": "OUFXs148QVA6Cx9B"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialYMax",
+              "hasUserCode": false,
+              "nodeId": "UaKIgy5WjFfiS6gU"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No minimum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialZMin",
+              "hasUserCode": false,
+              "nodeId": "+x1zXveZRKfs/c1e"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitAxialZMax",
+              "hasUserCode": false,
+              "nodeId": "iHMlNu/LL/C06iZe"
+            }
+          },
+          {
+            "type": 807,
+            "typeName": "BTMParameterNullableQuantity",
+            "message": {
+              "isNull": false,
+              "nullValue": "No maximum",
+              "units": "",
+              "value": 0.0,
+              "expression": "0 deg",
+              "isInteger": false,
+              "parameterId": "limitEulerConeAngleMax",
+              "hasUserCode": false,
+              "nodeId": "6bxvGT4Z963sKAQz"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": false,
+              "parameterId": "functionalconnection",
+              "hasUserCode": false,
+              "nodeId": "NR36wkwyy2iEZYbe"
+            }
+          },
+          {
+            "type": 67,
+            "typeName": "BTMParameterQueryWithOccurrenceList",
+            "message": {
+              "queries": [],
+              "parameterId": "facestoconnect",
+              "hasUserCode": false,
+              "nodeId": "Z8dkPqpegk/W039P"
+            }
+          },
+          {
+            "type": 144,
+            "typeName": "BTMParameterBoolean",
+            "message": {
+              "value": true,
+              "parameterId": "primaryAxisAlignment",
+              "hasUserCode": false,
+              "nodeId": "zYWpPAgOXA4TCQa5"
+            }
+          },
+          {
+            "type": 145,
+            "typeName": "BTMParameterEnum",
+            "message": {
+              "enumName": "Reorient secondary axis",
+              "value": "MINUS_Y",
+              "namespace": "",
+              "parameterId": "secondaryAxisAlignment",
+              "hasUserCode": false,
+              "nodeId": "veKnV93wn02Xt8fx"
+            }
+          }
+        ],
+        "suppressed": false,
+        "namespace": "",
+        "subFeatures": [],
+        "returnAfterSubfeatures": false,
+        "suppressionState": {
+          "type": 0
+        },
+        "hasUserCode": false,
+        "nodeId": "MNdreklEfaOk4cI8Q",
+        "mateConnectors": [
+          {
+            "type": 66,
+            "typeName": "BTMMateConnector",
+            "message": {
+              "isHidden": true,
+              "implicit": true,
+              "isAuxiliaryTreeMateConnector": false,
+              "version": 5,
+              "featureType": "mateConnector",
+              "featureId": "M4lYn+g1a1g/F3cUs",
+              "name": "Mate connector",
+              "parameters": [
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Origin type",
+                    "value": "ON_ENTITY",
+                    "namespace": "",
+                    "parameterId": "originType",
+                    "hasUserCode": false,
+                    "nodeId": "MUoZI8gCc914DW0Oz"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [
+                      {
+                        "type": 1083,
+                        "typeName": "BTMInferenceQueryWithOccurrence",
+                        "message": {
+                          "secondGeometryId": "",
+                          "inferenceType": "CENTER",
+                          "geometryIds": [
+                            "Jbt"
+                          ],
+                          "path": [
+                            "MUFFdzyWvjmEoU2ry",
+                            "MPfw6UqzXGYtW//79"
+                          ],
+                          "hasUserCode": false,
+                          "nodeId": "FyEZhvSEPYnMLgB"
+                        }
+                      }
+                    ],
+                    "parameterId": "originQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MK8a2cS8r6zFcsc6X"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "originAdditionalQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MY2w9hhmAECCyzts3"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "realign",
+                    "hasUserCode": false,
+                    "nodeId": "MTQy3EDNGkzaXDKWB"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "primaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MDwXdYUBRpZ5wnGbt"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "secondaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MjDnePwEwFRkpWWlq"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "transform",
+                    "hasUserCode": false,
+                    "nodeId": "MZEWjYXz82o+sKmOL"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationX",
+                    "hasUserCode": false,
+                    "nodeId": "M118Xh5cnZQhOAyr+"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationY",
+                    "hasUserCode": false,
+                    "nodeId": "MT/q2SVb8S7ZOixFW"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationZ",
+                    "hasUserCode": false,
+                    "nodeId": "MxLQvN9BDFFyZyK8K"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Rotation axis",
+                    "value": "ABOUT_Z",
+                    "namespace": "",
+                    "parameterId": "rotationType",
+                    "hasUserCode": false,
+                    "nodeId": "Md4Lt57s22Ob4sxAR"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*deg",
+                    "isInteger": false,
+                    "parameterId": "rotation",
+                    "hasUserCode": false,
+                    "nodeId": "MvBMLeJT8InIAvhUF"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "flipPrimary",
+                    "hasUserCode": false,
+                    "nodeId": "MI+nOyf6XYaHU2jCN"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Reorient secondary axis",
+                    "value": "PLUS_X",
+                    "namespace": "",
+                    "parameterId": "secondaryAxisType",
+                    "hasUserCode": false,
+                    "nodeId": "MYYUf75HWrPe0T/K5"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": 66,
+            "typeName": "BTMMateConnector",
+            "message": {
+              "isHidden": true,
+              "implicit": true,
+              "isAuxiliaryTreeMateConnector": false,
+              "version": 5,
+              "featureType": "mateConnector",
+              "featureId": "MX4Or1Y2/duN102LR",
+              "name": "Mate connector",
+              "parameters": [
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Origin type",
+                    "value": "ON_ENTITY",
+                    "namespace": "",
+                    "parameterId": "originType",
+                    "hasUserCode": false,
+                    "nodeId": "Mjel1ZUuM3z3CvLBq"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [
+                      {
+                        "type": 1083,
+                        "typeName": "BTMInferenceQueryWithOccurrence",
+                        "message": {
+                          "secondGeometryId": "",
+                          "inferenceType": "CENTER",
+                          "geometryIds": [
+                            "J2J"
+                          ],
+                          "path": [
+                            "M+pJOZyfRJ7wmuMc7",
+                            "M8mwUxITYgpFrbaT+"
+                          ],
+                          "hasUserCode": false,
+                          "nodeId": "FXmNPdd99WfsRbg"
+                        }
+                      }
+                    ],
+                    "parameterId": "originQuery",
+                    "hasUserCode": false,
+                    "nodeId": "Mx5qi4edcYdTY0HKo"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "originAdditionalQuery",
+                    "hasUserCode": false,
+                    "nodeId": "M2biKTWi9J0k+FGEx"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "realign",
+                    "hasUserCode": false,
+                    "nodeId": "MW1TeERAjX9pNh24x"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "primaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "M1cAtbmQGR96XGrfP"
+                  }
+                },
+                {
+                  "type": 67,
+                  "typeName": "BTMParameterQueryWithOccurrenceList",
+                  "message": {
+                    "queries": [],
+                    "parameterId": "secondaryAxisQuery",
+                    "hasUserCode": false,
+                    "nodeId": "MqzgT/4kZ8/8Ycds9"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "transform",
+                    "hasUserCode": false,
+                    "nodeId": "Md7RL3cGpuyVcIVA/"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationX",
+                    "hasUserCode": false,
+                    "nodeId": "MPRypl0wxH7zs2oxT"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationY",
+                    "hasUserCode": false,
+                    "nodeId": "M48jPva25JCctkou9"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*mm",
+                    "isInteger": false,
+                    "parameterId": "translationZ",
+                    "hasUserCode": false,
+                    "nodeId": "MM6Hw5C0KIyZLOEHM"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Rotation axis",
+                    "value": "ABOUT_Z",
+                    "namespace": "",
+                    "parameterId": "rotationType",
+                    "hasUserCode": false,
+                    "nodeId": "MBqj3Yh+4N8APGKHn"
+                  }
+                },
+                {
+                  "type": 147,
+                  "typeName": "BTMParameterQuantity",
+                  "message": {
+                    "units": "",
+                    "value": 0.0,
+                    "expression": "0.0*deg",
+                    "isInteger": false,
+                    "parameterId": "rotation",
+                    "hasUserCode": false,
+                    "nodeId": "MB9v3q1bLqxzyq7jk"
+                  }
+                },
+                {
+                  "type": 144,
+                  "typeName": "BTMParameterBoolean",
+                  "message": {
+                    "value": false,
+                    "parameterId": "flipPrimary",
+                    "hasUserCode": false,
+                    "nodeId": "MRYxJAxCz1p7el/Uh"
+                  }
+                },
+                {
+                  "type": 145,
+                  "typeName": "BTMParameterEnum",
+                  "message": {
+                    "enumName": "Reorient secondary axis",
+                    "value": "PLUS_X",
+                    "namespace": "",
+                    "parameterId": "secondaryAxisType",
+                    "hasUserCode": false,
+                    "nodeId": "MXymQTwgk6D+kssWt"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "featureStates": [
+    {
+      "key": "MERt0YN34dxElmTUV",
+      "value": {
+        "type": 1688,
+        "typeName": "BTFeatureState",
+        "message": {
+          "featureStatus": "OK",
+          "inactive": false
+        }
+      }
+    },
+    {
+      "key": "MNdreklEfaOk4cI8Q",
+      "value": {
+        "type": 1688,
+        "typeName": "BTFeatureState",
+        "message": {
+          "featureStatus": "OK",
+          "inactive": false
+        }
+      }
+    },
+    {
+      "key": "MLb/hwduSUpazelg0",
+      "value": {
+        "type": 1688,
+        "typeName": "BTFeatureState",
+        "message": {
+          "featureStatus": "OK",
+          "inactive": false
+        }
+      }
+    },
+    {
+      "key": "M3dmleGi3UUfdwna6",
+      "value": {
+        "type": 1688,
+        "typeName": "BTFeatureState",
+        "message": {
+          "featureStatus": "OK",
+          "inactive": false
+        }
+      }
+    }
+  ],
+  "isComplete": true,
+  "serializationVersion": "1.2.5",
+  "sourceMicroversion": "59ab2ca35a9c2c67c97c586d",
+  "rejectMicroversionSkew": false,
+  "microversionSkew": false,
+  "libraryVersion": 0
+}
