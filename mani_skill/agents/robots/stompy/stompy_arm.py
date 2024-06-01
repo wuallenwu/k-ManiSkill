@@ -33,16 +33,16 @@ class StompyArm(BaseAgent):
         ),
     )
     startpos = [0.0, 0.0, 0.0]
-    startorn = [0.0, 0.0, 0.0, 0.0]
+    startorn = [0.0, 0.0, 0.0, 1.0]
     startrpy = [0.0, 0.0, 0.0]
     keyframes = dict(
         rest=Keyframe(
             pose = sapien.Pose(p=startpos, q=startorn), 
-            qpos=np.array([0.0, np.pi / 8, 0.0, -np.pi * 5 / 8, 0.0, np.pi * 3 / 4, np.pi / 4, 0.04, 0.04]),
+            qpos=np.array([1.0, 1.0, 1.0, 0.0, 0.0,100.0, 0.0, 0.0, 0.0]),
         )
     )
-    fix_root_link = True
-    balance_passive_force = True
+    # fix_root_link = True
+    # balance_passive_force = True
     # load_multiple_collisions = True
 
     arm_joint_names = [
@@ -61,6 +61,9 @@ class StompyArm(BaseAgent):
          'joint_hand_right_1_slider_1',
     ]
 
+    arm_joint_names = ["joint_x8_1_dof_x8", "joint_x8_2_dof_x8"]
+    ee_link_name = "link_x6_1_outer_x6_1"
+
     arm_stiffness = 1e3
     arm_damping = 1e2
     arm_force_limit = 100
@@ -76,6 +79,8 @@ class StompyArm(BaseAgent):
         # print(self.robot.active_joints)
         # print(self.robot.active_joints_map.keys())
         # breakpoint()
+        # print(self.ee_link_name)
+        # breakpoint()
         arm_pd_ee_delta_pose = PDEEPoseControllerConfig(
             joint_names=self.arm_joint_names,
             pos_lower=-0.1,
@@ -85,32 +90,67 @@ class StompyArm(BaseAgent):
             stiffness=self.arm_stiffness,
             damping=self.arm_damping,
             force_limit=self.arm_force_limit,
-            # ee_link=self.ee_link_name,
+            ee_link=self.ee_link_name,
             urdf_path=self.urdf_path,
         )
         arm_pd_ee_target_delta_pose = deepcopy(arm_pd_ee_delta_pose)
         arm_pd_ee_target_delta_pose.use_target = True
-
-        # PD ee position (for human-interaction/teleoperation)
-        arm_pd_ee_delta_pose_align = deepcopy(arm_pd_ee_delta_pose)
-        arm_pd_ee_delta_pose_align.frame = "ee_align"
-
-        gripper_pd_joint_pos = PDJointPosMimicControllerConfig(
-            self.gripper_joint_names,
-            lower=-0.01,  # a trick to have force when the object is thin
-            upper=0.04,
-            stiffness=self.gripper_stiffness,
-            damping=self.gripper_damping,
-            force_limit=self.gripper_force_limit,
-        )
-        return dict(
+        controller_configs = dict(
             pd_ee_delta_pose=dict(
-                arm=arm_pd_ee_delta_pose, gripper=gripper_pd_joint_pos
+                arm=arm_pd_ee_delta_pose
             ),
         )
 
-    def _after_init(self):
-        print(self.robot.get_links())
+        # Make a deepcopy in case users modify any config
+        return deepcopy_dict(controller_configs)
+
+
+    # ee_link_name = "link_hand_right_1_rack_1"
+
+    # @property
+    # def _controller_configs(
+    #     self,
+    # ):
+    #     # print(self.robot.active_joints)
+    #     # print(self.robot.active_joints_map.keys())
+    #     # breakpoint()
+    #     # print(self.ee_link_name)
+    #     # breakpoint()
+    #     arm_pd_ee_delta_pose = PDEEPoseControllerConfig(
+    #         joint_names=self.arm_joint_names,
+    #         pos_lower=-0.1,
+    #         pos_upper=0.1,
+    #         rot_lower=-0.1,
+    #         rot_upper=0.1,
+    #         stiffness=self.arm_stiffness,
+    #         damping=self.arm_damping,
+    #         force_limit=self.arm_force_limit,
+    #         ee_link=self.ee_link_name,
+    #         urdf_path=self.urdf_path,
+    #     )
+    #     arm_pd_ee_target_delta_pose = deepcopy(arm_pd_ee_delta_pose)
+    #     arm_pd_ee_target_delta_pose.use_target = True
+    #     breakpoint()
+    #     gripper_pd_joint_pos = PDJointPosMimicControllerConfig(
+    #         self.gripper_joint_names,
+    #         lower=-0.01,  # a trick to have force when the object is thin
+    #         upper=0.04,
+    #         stiffness=self.gripper_stiffness,
+    #         damping=self.gripper_damping,
+    #         force_limit=self.gripper_force_limit,
+    #     )
+    #     controller_configs = dict(
+    #         pd_ee_delta_pose=dict(
+    #             arm=arm_pd_ee_delta_pose, gripper=gripper_pd_joint_pos
+    #         ),
+    #     )
+
+    #     # Make a deepcopy in case users modify any config
+    #     return deepcopy_dict(controller_configs)
+
+    # def _after_init(self):
+    #     # print(self.robot.get_links())
+    #     pass
 
     # @property
     # def _controller_configs(

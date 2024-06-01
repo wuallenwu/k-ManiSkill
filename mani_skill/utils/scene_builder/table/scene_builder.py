@@ -181,6 +181,20 @@ class TableSceneBuilder(SceneBuilder):
             )
             qpos[:, -2:] = 0.04
             self.env.agent.robot.set_pose(sapien.Pose(p=[-0.3, 0, 0], q=euler2quat(-np.pi, 0, -np.pi / 2)))
+        elif self.env.robot_uids == "stompy":
+            qpos = np.array(
+                [
+                    1.5,-1.5,-0.942,0,1.5,-1.5,-0.25,0.25,0.5,0.65,-0.65,-0.5,-0.5,0,0,-0.5,0.5,0.78,-0.78,0.25,-0.25,0,-0.2,0,0.2,0,0,-0.2,0.2,0.2,-2.2,0,0,0,0,0,0,
+                ]
+            )
+            qpos = (
+                self.env._episode_rng.normal(
+                    0, self.robot_init_qpos_noise, (b, len(qpos))
+                )
+                + qpos
+            )
+            qpos[:, -2:] = 0.04
+            self.env.agent.robot.set_pose(sapien.Pose(p=[-0.3, 0, 0], q=euler2quat(-np.pi, 0, -np.pi / 2)))
         elif (
             "dclaw" in self.env.robot_uids
             or "allegro" in self.env.robot_uids

@@ -7,7 +7,7 @@ import torch
 import torch.random
 from transforms3d.euler import euler2quat
 
-from mani_skill.agents.robots import StompyArm
+from mani_skill.agents.robots import StompyArm, Stompy
 from mani_skill.envs.sapien_env import BaseEnv
 from mani_skill.agents.base_agent import BaseAgent
 from mani_skill.agents.controllers import *
@@ -39,10 +39,10 @@ class SPushCubeEnv(BaseEnv):
     Visualization: https://maniskill.readthedocs.io/en/latest/tasks/index.html#pushcube-v1
     """
 
-    SUPPORTED_ROBOTS = ["stompy_arm"]
+    SUPPORTED_ROBOTS = ["stompy_arm", "stompy"]
 
     # Specify some supported robot types
-    agent: Union[StompyArm]
+    agent: Union[StompyArm, Stompy]
 
     # set some commonly used values
     goal_radius = 0.1
@@ -50,7 +50,8 @@ class SPushCubeEnv(BaseEnv):
 
     def __init__(self, *args, robot_uids="stompy_arm", robot_init_qpos_noise=0.02, **kwargs):
         # specifying robot_uids="stompy_arm" as the default means gym.make("Stompy-PushCube") will default to using the panda arm.
-        self.robot_init_qpos_noise = 0.0
+        # self.robot_init_qpos_noise = robot_init_qpos_noise
+        self.robot_init_qpos_noise = 0
         super().__init__(*args, robot_uids=robot_uids, **kwargs)
 
     # Specify default simulation/gpu memory configurations to override any default values

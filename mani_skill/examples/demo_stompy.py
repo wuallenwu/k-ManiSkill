@@ -43,6 +43,7 @@ def parse_args(args=None):
         "--seed",
         type=int,
         help="Seed the random actions and simulator. Default is no seed",
+        default = 0
     )
     args, opts = parser.parse_known_args(args)
 
@@ -65,7 +66,7 @@ def main(args):
     # print(StompyArm.fix_root_link)
     # breakpoint()
     # print(StompyArm.get_state(StompyArm))
-
+    # print(StompyArm.get_proprioception())
     np.set_printoptions(suppress=True, precision=3)
     verbose = not args.quiet
     if args.seed is not None:
@@ -101,6 +102,7 @@ def main(args):
 
     while True:
         action = env.action_space.sample()
+        action = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
         # print(action)
         obs, reward, terminated, truncated, info = env.step(action)
         if verbose:
@@ -108,6 +110,8 @@ def main(args):
             # print("terminated", terminated)
             # print("truncated", truncated)
             # print("info", info)
+            print("observation", obs)
+            # print(" ".join(f"{key}: {value}" for key, value in obs.items()))
             pass
 
         if args.render_mode is not None:
