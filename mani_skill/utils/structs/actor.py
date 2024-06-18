@@ -140,12 +140,19 @@ class Actor(PhysxRigidDynamicComponentStruct[sapien.Entity]):
             ang_vel = self.get_angular_velocity()  # [N, 3]
         return torch.hstack([pose.p, pose.q, vel, ang_vel])
 
-    def set_state(self, state: Array):
+    def set_state(self, state: Array, env_idx: torch.Tensor = None):
         if physx.is_gpu_enabled():
+            if env_idx is not None:
+                prev_reset_mask = self.scene._reset_mask.clone()
+                # safe guard against setting the wrong states
+                self.scene._reset_mask[:] = False
+                self.scene._reset_mask[env_idx] = True
             state = common.to_tensor(state)
             self.set_pose(Pose.create(state[:, :7]))
             self.set_linear_velocity(state[:, 7:10])
             self.set_angular_velocity(state[:, 10:13])
+            if env_idx is not None:
+                self.scene._reset_mask = prev_reset_mask
         else:
             state = common.to_numpy(state[0])
             self.set_pose(sapien.Pose(state[0:3], state[3:7]))
@@ -222,12 +229,13 @@ class Actor(PhysxRigidDynamicComponentStruct[sapien.Entity]):
             torch.linalg.norm(self.angular_velocity, axis=1) <= ang_thresh,
         )
 
-    def set_collision_group_bit(self, group: int, bit_idx: int, bit: int):
-        """Sets a specific collision group bit for all collision shapes in all parallel actors"""
+    def set_collision_group_bit(self, group: int, bit_idx: int, bit: Union[int, bool]):
+        """Set's a specific collision group bit for all collision shapes in all parallel actors"""
+        bit = int(bit)
         for body in self._bodies:
             for cs in body.get_collision_shapes():
                 cg = cs.get_collision_groups()
-                cg[group] |= bit << bit_idx
+                cg[group] = (cg[group] & ~(1 << bit_idx)) | (bit << bit_idx)
                 cs.set_collision_groups(cg)
 
     def get_first_collision_mesh(self, to_world_frame: bool = True) -> trimesh.Trimesh:

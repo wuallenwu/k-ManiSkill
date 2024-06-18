@@ -23,14 +23,15 @@ from mani_skill.agents.controllers.base_controller import CombinedController
 from mani_skill.envs.sapien_env import BaseEnv
 from mani_skill.trajectory import utils as trajectory_utils
 from mani_skill.trajectory.merge_trajectory import merge_h5
-from mani_skill.utils import gym_utils, io_utils, wrappers
+from mani_skill.utils import common, gym_utils, io_utils, wrappers
+from mani_skill.utils.structs.link import Link
 
 
 def qpos_to_pd_joint_delta_pos(controller: PDJointPosController, qpos):
     assert type(controller) == PDJointPosController
     assert controller.config.use_delta
     assert controller.config.normalize_action
-    delta_qpos = qpos - controller.qpos.numpy()[0]
+    delta_qpos = qpos - controller.qpos.cpu().numpy()[0]
     low, high = controller.config.lower, controller.config.upper
     return gym_utils.inv_scale_action(delta_qpos, low, high)
 
@@ -40,7 +41,7 @@ def qpos_to_pd_joint_target_delta_pos(controller: PDJointPosController, qpos):
     assert controller.config.use_delta
     assert controller.config.use_target
     assert controller.config.normalize_action
-    delta_qpos = qpos - controller._target_qpos.numpy()[0]
+    delta_qpos = qpos - controller._target_qpos.cpu().numpy()[0]
     low, high = controller.config.lower, controller.config.upper
     return gym_utils.inv_scale_action(delta_qpos, low, high)
 
@@ -48,7 +49,7 @@ def qpos_to_pd_joint_target_delta_pos(controller: PDJointPosController, qpos):
 def qpos_to_pd_joint_vel(controller: PDJointVelController, qpos):
     assert type(controller) == PDJointVelController
     assert controller.config.normalize_action
-    delta_qpos = qpos - controller.qpos.numpy()[0]
+    delta_qpos = qpos - controller.qpos.cpu().numpy()[0]
     qvel = delta_qpos * controller._control_freq
     low, high = controller.config.lower, controller.config.upper
     return gym_utils.inv_scale_action(qvel, low, high)
@@ -103,10 +104,15 @@ def from_pd_joint_pos_to_ee(
     # given target joint positions instead of current joint positions.
     # Thus, we need to compute forward kinematics
     pin_model = ori_controller.articulation.create_pinocchio_model()
+    assert (
+        "arm" in ori_controller.controllers
+    ), "Could not find the controller for the robot arm. This controller conversion tool requires there to be a key called 'arm' in the controller"
     ori_arm_controller: PDJointPosController = ori_controller.controllers["arm"]
     arm_controller: PDEEPoseController = controller.controllers["arm"]
-    assert arm_controller.config.frame == "ee"
-    ee_link: sapien.Link = arm_controller.ee_link
+    assert (
+        arm_controller.config.frame == "root_translation:root_aligned_body_rotation"
+    ), "Currently only support the 'root_translation:root_aligned_body_rotation' ee control frame"
+    ee_link: Link = arm_controller.ee_link
 
     info = {}
 
@@ -132,7 +138,7 @@ def from_pd_joint_pos_to_ee(
 
         flag = True
 
-        for _ in range(2):
+        for _ in range(4):
             if target_mode:
                 prev_ee_pose_at_base = arm_controller._target_pose
             else:
@@ -291,6 +297,13 @@ def from_pd_joint_delta_pos(
 def parse_args(args=None):
     parser = argparse.ArgumentParser()
     parser.add_argument("--traj-path", type=str, required=True)
+    parser.add_argument(
+        "-b",
+        "--sim-backend",
+        type=str,
+        default="auto",
+        help="Which simulation backend to use. Can be 'auto', 'cpu', 'gpu'",
+    )
     parser.add_argument("-o", "--obs-mode", type=str, help="target observation mode")
     parser.add_argument(
         "-c", "--target-control-mode", type=str, help="target control mode"
@@ -317,6 +330,13 @@ def parse_args(args=None):
         "--use-env-states",
         action="store_true",
         help="whether to replay by env states instead of actions",
+    )
+    parser.add_argument(
+        "--use-first-env-state",
+        action="store_true",
+        help="use the first env state in the trajectory to set initial state. This can be useful for trying to replay \
+            demonstrations collected in the CPU simulation in the GPU simulation by first starting with the same initial \
+            state as GPU simulated tasks will randomize initial states differently despite given the same seed compared to CPU sim.",
     )
     parser.add_argument(
         "--count",
@@ -373,6 +393,8 @@ def _main(args, proc_id: int = 0, num_procs=1, pbar=None):
 
     # Create a twin env with the original kwargs
     if args.target_control_mode is not None:
+        if args.sim_backend:
+            ori_env_kwargs["sim_backend"] = args.sim_backend
         ori_env = gym.make(env_id, **ori_env_kwargs)
     else:
         ori_env = None
@@ -406,6 +428,9 @@ def _main(args, proc_id: int = 0, num_procs=1, pbar=None):
             # TODO (stao): remove this if we ever support RT on GPU sim.
             if args.shader[:2] == "rt":
                 env_kwargs["sim_backend"] = "cpu"
+
+    if args.sim_backend:
+        env_kwargs["sim_backend"] = args.sim_backend
     env = gym.make(env_id, **env_kwargs)
     if pbar is not None:
         pbar.set_postfix(
@@ -466,24 +491,49 @@ def _main(args, proc_id: int = 0, num_procs=1, pbar=None):
         ori_control_mode = ep["control_mode"]
 
         for _ in range(args.max_retry + 1):
+            # Each trial for each trajectory to replay, we reset the environment
+            # and optionally set the first environment state
             env.reset(seed=seed, **reset_kwargs)
             if ori_env is not None:
                 ori_env.reset(seed=seed, **reset_kwargs)
 
-            # Original actions to replay
-            ori_actions = ori_h5_file[traj_id]["actions"][:]
-
-            # Original env states to replay
-            if args.use_env_states:
+            # set first environment state and update recorded env state
+            if args.use_first_env_state or args.use_env_states:
                 ori_env_states = trajectory_utils.dict_to_list_of_dicts(
                     ori_h5_file[traj_id]["env_states"]
                 )
+                if ori_env is not None:
+                    ori_env.set_state_dict(ori_env_states[0])
                 env.base_env.set_state_dict(ori_env_states[0])
                 ori_env_states = ori_env_states[1:]
+                if args.save_traj:
+                    # replace the first saved env state
+                    # since we set state earlier and RecordEpisode will save the reset to state.
+                    def recursive_replace(x, y):
+                        if isinstance(x, np.ndarray):
+                            x[-1, :] = y[-1, :]
+                        else:
+                            for k in x.keys():
+                                recursive_replace(x[k], y[k])
 
+                    recursive_replace(
+                        env._trajectory_buffer.state, common.batch(ori_env_states[0])
+                    )
+                    fixed_obs = env.base_env.get_obs()
+                    recursive_replace(
+                        env._trajectory_buffer.observation,
+                        common.to_numpy(common.batch(fixed_obs)),
+                    )
+            # Original actions to replay
+            ori_actions = ori_h5_file[traj_id]["actions"][:]
             info = {}
 
             # Without conversion between control modes
+            assert not (
+                target_control_mode is not None and args.use_env_states
+            ), "Cannot use env states when trying to \
+                convert from one control mode to another. This is because control mode conversion causes there to be changes \
+                in how many actions are taken to achieve the same states"
             if target_control_mode is None:
                 n = len(ori_actions)
                 if pbar is not None:
@@ -492,10 +542,10 @@ def _main(args, proc_id: int = 0, num_procs=1, pbar=None):
                     if pbar is not None:
                         pbar.update()
                     _, _, _, truncated, info = env.step(a)
-                    if args.vis:
-                        env.base_env.render_human()
                     if args.use_env_states:
                         env.base_env.set_state_dict(ori_env_states[t])
+                    if args.vis:
+                        env.base_env.render_human()
 
             # From joint position to others
             elif ori_control_mode == "pd_joint_pos":
@@ -519,6 +569,10 @@ def _main(args, proc_id: int = 0, num_procs=1, pbar=None):
                     render=args.vis,
                     pbar=pbar,
                     verbose=args.verbose,
+                )
+            else:
+                raise NotImplementedError(
+                    f"Script currently does not support converting {ori_control_mode} to {target_control_mode}"
                 )
 
             success = info.get("success", False)
